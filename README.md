@@ -1,2 +1,2 @@
-# gullible
-This repository contains tools built in Go for better understanding of the language
+# gosh
+This repository contains a shell built in Go. The Shell currently supports a list of commands
