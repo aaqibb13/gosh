@@ -3,6 +3,7 @@ package parse
 const (
 	ls = "ls"
 	pwd = "pwd"
+	exit = "exit"
 	cd = "cd"
 	cat = "cat"
 	mkdir = "mkdir"

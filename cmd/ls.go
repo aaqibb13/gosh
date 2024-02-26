@@ -13,7 +13,8 @@ var lsCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("ls command is triggered: ", cmd.CalledAs())
 		fmt.Println("ls command is triggered: ", args)
-		//CommandExecutor()
+		cmdResponse := CommandExecutor(cmd.CalledAs(), "")
+		fmt.Println("command response in cobra command: ", cmdResponse)
 	},
 }
 

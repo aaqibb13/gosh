@@ -20,7 +20,7 @@ var RootCmd = &cobra.Command{
 func Execute() {
 	RootCmd.AddCommand(pwdCmd, lsCmd)
 	if err := RootCmd.Execute(); err != nil {
-		fmt.Println(err)
+		fmt.Println("error in root command: ", err)
 		os.Exit(1)
 	}
 }
