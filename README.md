@@ -21,3 +21,13 @@ The list of commands that the tool currently supports are:
 1. pwd
 2. ls (with flags)
 3. exit
+
+A few of the example snippets are:
+
+Example One:
+
+![](shellfiles/Screenshot%202024-02-28%20at%2012.54.15%E2%80%AFAM.png)
+
+Example Two:
+
+![](shellfiles/Screenshot%202024-02-28%20at%201.10.43%E2%80%AFAM.png)
