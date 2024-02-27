@@ -1,9 +1,9 @@
 package main
 
 import (
-	"gosh/main/ui"
+	"gosh/main/cmd"
 )
 
 func main() {
-	ui.ExecuteCommand()
+	cmd.Run()
 }

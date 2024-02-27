@@ -1,8 +1,7 @@
-package parse
+package cmd
 
 import (
 	"fmt"
-	"gosh/main/cmd"
 	"os"
 )
 
@@ -13,12 +12,12 @@ func CommandParse(command string) {
 	//	handle all command here using switch statement
 	switch args[0] {
 	case pwd:
-		cmd.CommandExecutor(args[0], "")
+		CommandExecutor(args[0], "")
 	case ls:
 		if len(args) > 1 {
-			cmd.CommandExecutor(args[0], args[1])
+			CommandExecutor(args[0], args[1])
 		} else {
-			cmd.CommandExecutor(args[0], "")
+			CommandExecutor(args[0], "")
 		}
 	case cat:
 		fmt.Println("cat command is called")

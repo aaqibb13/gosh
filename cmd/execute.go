@@ -1,15 +1,14 @@
-package ui
+package cmd
 
 import (
 	"bufio"
 	"fmt"
-	"gosh/main/parse"
 	"os"
 	"runtime"
 	"strings"
 )
 
-func ExecuteCommand() {
+func Run() {
 
 	for {
 		runtimeEnv := runtime.GOOS
@@ -32,6 +31,6 @@ func ExecuteCommand() {
 
 		// Remove trailing newline character
 		input = strings.TrimSpace(input)
-		parse.CommandParse(input)
+		CommandParse(input)
 	}
 }
