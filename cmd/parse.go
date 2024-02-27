@@ -19,15 +19,6 @@ func CommandParse(command string) {
 		} else {
 			CommandExecutor(args[0], "")
 		}
-	case cat:
-		fmt.Println("cat command is called")
-	case cp:
-	case mv:
-	case find:
-	case grep:
-	case cd:
-	case mkdir:
-	case rmdir:
 	case exit:
 		os.Exit(0)
 	default:
