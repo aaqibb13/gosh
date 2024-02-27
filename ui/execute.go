@@ -5,11 +5,19 @@ import (
 	"fmt"
 	"gosh/main/parse"
 	"os"
+	"runtime"
 	"strings"
 )
 
-func ExecuteCommand() string {
+func ExecuteCommand() {
+
 	for {
+		runtimeEnv := runtime.GOOS
+		if runtimeEnv != "darwin" {
+			fmt.Printf("command line tool works on %s only", runtimeEnv)
+			break
+		}
+
 		// Keeping the command running
 		reader := bufio.NewReader(os.Stdin)
 		const colorGreen = "\033[0;32m"
@@ -19,7 +27,7 @@ func ExecuteCommand() string {
 		input, err := reader.ReadString('\n')
 		if err != nil {
 			fmt.Println("Error reading input:", err)
-			return err.Error()
+			return
 		}
 
 		// Remove trailing newline character
