@@ -24,10 +24,6 @@ func ExecuteCommand() string {
 
 		// Remove trailing newline character
 		input = strings.TrimSpace(input)
-
-		// Process the command
-		//fmt.Println("You entered:", input)
-
 		parse.CommandParse(input)
 	}
 }
