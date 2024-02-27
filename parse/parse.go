@@ -4,28 +4,22 @@ import (
 	"fmt"
 	"gosh/main/cmd"
 	"os"
-	"strings"
 )
 
-func CommandParse(commandString string) {
-	// Parsed command from promptUI
-	splittedResult := strings.Split(commandString, " ")
-	//fmt.Println("splittedResult: ", splittedResult)
+func CommandParse(command string) {
+	// call the utility here
+	args := TruncateExtraSpacesInCommand(command)
 
 	//	handle all command here using switch statement
-	switch splittedResult[0] {
+	switch args[0] {
 	case pwd:
-		fmt.Println("pwd command is called")
+		cmd.CommandExecutor(args[0], "")
 	case ls:
-		fmt.Println("ls command is called")
-		cmd.Execute()
-		//if len(splittedResult) > 1 {
-		//	cmdResponse := cmd.CommandExecutor(splittedResult[0], splittedResult[1])
-		//	return cmdResponse
-		//} else {
-		//	cmdResponse := cmd.CommandExecutor(splittedResult[0], "")
-		//	return cmdResponse
-		//}
+		if len(args) > 1 {
+			cmd.CommandExecutor(args[0], args[1])
+		} else {
+			cmd.CommandExecutor(args[0], "")
+		}
 	case cat:
 		fmt.Println("cat command is called")
 	case cp:
@@ -38,7 +32,7 @@ func CommandParse(commandString string) {
 	case exit:
 		os.Exit(0)
 	default:
-		err := fmt.Sprintf("gosh: command not recognized: %s", splittedResult[0])
+		err := fmt.Sprintf("gosh: command not recognized: %s", args[0])
 		fmt.Println(err)
 	}
 	return
