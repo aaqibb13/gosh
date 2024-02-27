@@ -1,4 +1,4 @@
-package parse
+package cmd
 
 const (
 	ls = "ls"
