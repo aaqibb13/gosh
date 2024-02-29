@@ -1,5 +1,5 @@
 # gosh
-**Gosh** is a Go based shell written in Go.
+**Gosh** is a shell written in Go.
 
 ### Rationale behind the shell
 The idea was to mimic the behaviour of a shell like bash or zsh at least to a certain degree. The behaviour involved 
