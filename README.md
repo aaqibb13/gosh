@@ -11,7 +11,7 @@ The execution starts from the `cmd/main.go` where `Run()` is called, the respons
 `CommandParse()` function. The input to the function is the command which is to be executed. The command is parsed 
 (extra white spaces are removed, arguments splitted), the corresponding command is then invoked (only the ones that the 
 tool supports). Furthermore, the splitted arguments are then passed to the `CommandExecutor()` where the corresponding 
-command is executed 
+command is executed.
 In `CommandExecutor()`, the commands are executed using `os/exec` package.
 
 
