@@ -22,7 +22,7 @@ The list of commands that the tool currently supports are:
 2. ls (with flags)
 3. exit
 
-A few of the example snippets are:
+Examples of command snippets are:
 
 Example One:
 
