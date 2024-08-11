@@ -2,8 +2,8 @@
 **Gosh** is a shell written in Go.
 
 ### Rationale behind the shell
-The idea was to mimic the behaviour of a shell like bash or zsh at least to a certain degree. The behaviour involved 
-understanding how a shell runs. If you know about REPL (Read Eval Print Loop), you probably know what I'm talking about.
+The idea was to mimic the behaviour of a shell like `bash` or `zsh` at least to a certain degree. The behaviour involved 
+understanding how a shell runs. If you know about `REPL (Read Eval Print Loop)`, you probably know what I'm talking about.
 So, I wanted this command line tool to run in a loop which keeps running until it's either stopped via a command like 
 `exit` or interrupted by a signal like `SIGINT`
 
